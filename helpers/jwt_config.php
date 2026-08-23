@@ -1,0 +1,2 @@
+<?php
+define('JWT_SECRET', '46ab3e16e7f078c0434c90161cf7fb98519a612ac621e304909afe871d9f17ef');
