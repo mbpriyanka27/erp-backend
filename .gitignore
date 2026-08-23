@@ -1,3 +1,5 @@
 config/jwt_config.php
 helpers/jwt_config.php
 config/database.php
+erp_backend/config/database.php
+erp_backend/config/database.php
