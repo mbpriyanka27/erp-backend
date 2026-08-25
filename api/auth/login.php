@@ -19,9 +19,8 @@ $pdo = get_db_connection();
 
 $stmt = $pdo->prepare(
     'SELECT u.id, u.name, u.email, u.password_hash, u.is_active,
-            u.role_id, r.name AS role_name, u.department_id
+            u.role AS role_name, u.department_id
      FROM users u
-     JOIN roles r ON r.id = u.role_id
      WHERE u.email = :email'
 );
 $stmt->execute(['email' => $email]);

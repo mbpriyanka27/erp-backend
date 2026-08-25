@@ -78,9 +78,8 @@ function require_auth(PDO $pdo): array {
     }
 
     $stmt = $pdo->prepare(
-        'SELECT u.id, u.name, u.email, u.role_id, u.department_id, r.name AS role_name
+        'SELECT u.id, u.name, u.email, u.role AS role_name, u.department_id
          FROM users u
-         JOIN roles r ON r.id = u.role_id
          WHERE u.id = :id AND u.is_active = 1'
     );
     $stmt->execute(['id' => $payload['sub']]);
